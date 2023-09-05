@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div id="contenido">
+
+        <div class="tabla">
+            <table id="tablaPacientes">
+                <thead>
+                    <tr>
+                        <th>Provincia</th>
+                        <th>Hospital</th>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Eliminar</th>
+                        <th>Marcar</th>
+                    </tr>
+                </thead>
+                <tbody id="bodyTabla">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6" id="recuento" class="resul"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <form id="formulario">
+            <div class="div-n">
+                <label for="nombre" class="esp">Nombre: </label>
+                <input type="text" id="nombre" required><br><br>
+            </div>
+            <div class="div-n">
+                <label for="telefono" class="esp">Telefono:</label>
+                <input type="text" id="telefono" required><br><br>
+            </div>
+            <div class="div-n">
+                <label for="provincia" class="esp">Provincia:</label>
+                <select id="provincia" onchange="cargarHospitales()" required>
+                    <option value="">Selecciona una provincia</option>
+                    <option value="Castellón">Castellón</option>
+                    <option value="Valencia">Valencia</option>
+                    <option value="Alicante">Alicante</option>
+                </select><br><br>
+            </div>
+            <div class="div-n">
+                <label for="hospital" class="esp">Hospital:</label>
+                <select id="hospital" required>
+                    <option value="">Selecciona un hospital</option>
+                </select><br><br>
+            </div>
+            <div class="div-n">
+                <button type="submit" id="btn-submit">Agregar</button>
+            </div>
+
+        </form>
+
+    </div>
+
+
+</body>
+
+<script src="js/script.js"></script>
+
+</html>
